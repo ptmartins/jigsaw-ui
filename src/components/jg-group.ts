@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("jg-group")
 
-export class JGButtonGroup extends LitElement {
+export class JGGroup extends LitElement {
 
     @property({ type: String }) gap = '0';
 
