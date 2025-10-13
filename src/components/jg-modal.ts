@@ -88,9 +88,15 @@ export class JGModal extends LitElement {
         }
     }
 
+    private handleOverlayClick = (ev: MouseEvent) => {
+        if(ev.target === ev.currentTarget) {
+            this.closeModal();
+        }
+    }
+
     render() {
         return html`
-            <div class="overlay">
+            <div class="overlay" @click=${this.handleOverlayClick}>
                 <div class="modal">
                     <div class="modal__header">
                         ${this.title}
