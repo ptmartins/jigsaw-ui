@@ -13,7 +13,7 @@
         <h2>JG Button Examples</h2>
         
         <jg-button>Default Button</jg-button>
-        <jg-button type="primary" size="lg">Primary Button</jg-button>
+        <jg-button type="primary" size="sm">Primary Button</jg-button> 
         <jg-button type="danger">Danger Button</jg-button>
         <jg-button type="warning">Warning Button</jg-button>
         <jg-button type="success">Success Button</jg-button>
@@ -45,19 +45,44 @@
         <div class="demo-section">
         <h2>Chip Examples</h2>
         
-        <jg-chip label="Lorem ipsum ..."></jg-avatar>
+        <jg-chip label="Lorem ipsum"></jg-avatar>
 
     </div>
 
     </div>
 
-        <div class="demo-section">
+    <div class="demo-section">
         <h2>Progress Bar Examples</h2>
         
         <jg-progress value="58" max="100"></jg-progress>
 
     </div>
 
+
+    <div class="demo-section">  
+        <h2>ModalExamples</h2>
+        <jg-button id="modalBtn" class="modalBtn" type="primary"> Open modal </jg-button>
+    </div>
+
+
     <script type="module" src="/src/index.ts"></script>
+
+    <script>
+        let modalBtn = document.getElementById('modalBtn');
+
+        let showModal = () => {
+        let modal = document.createElement('jg-modal');
+            modal.setAttribute('title', 'My working Modal');
+            modal.setAttribute('cancelBtn', true);
+            modal.innerHTML = `
+                <h1>Hello world</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsum et quo.</p>
+            `;
+
+            document.body.appendChild(modal);
+        }
+
+        modalBtn.addEventListener('click', showModal);
+    </script>
 </body>
 </html>
