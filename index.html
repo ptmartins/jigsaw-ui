@@ -1,88 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    <h1>Jigsaw UI Components Demo</h1>
-    
-    <div class="demo-section">
-        <h2>JG Button Examples</h2>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JigSaw UI - Sandbox</title>
+        <link rel="stylesheet" href="globals.css">
+    </head>
+    <body>
         
-        <jg-button>Default Button</jg-button>
-        <jg-button type="primary" size="sm">Primary Button</jg-button> 
-        <jg-button type="danger">Danger Button</jg-button>
-        <jg-button type="warning">Warning Button</jg-button>
-        <jg-button type="success">Success Button</jg-button>
+        <header class="header">
+            <h1>Jigsaw UI</h1>
+        </header>
 
-        <jg-button type="primary" size="sm">Small Primary with Icon <jg-icon name="favorite" size="22px"></jg-icon></jg-button>
-    </div>
+        <main class="main">
+            
+            <div class="demo-section">
+                <h2>Button</h2>
+                
+                <jg-button action="default">Default Button</jg-button>
+                <jg-button action="primary" type="primary">Primary Button</jg-button> 
+                <jg-button type="danger">Danger Button</jg-button>
+                <jg-button type="warning">Warning Button</jg-button>
+                <jg-button type="success">Success Button</jg-button>
+                <jg-button type="primary" size="sm">Button</jg-button>
+            </div>
 
+        </main>
 
-    <div class="demo-section">
-        <h2>JG Button Group Examples</h2>
-        
-        <jg-group>
-            <jg-button type="primary">Left</jg-button>
-            <jg-button type="primary">Middle</jg-button>
-            <jg-button type="primary">Right</jg-button> 
-        </jg-group>
+        <footer class="footer">
 
-    </div>
-
-        <div class="demo-section">
-        <h2>Avatar Examples</h2>
-        
-        <jg-avatar label="PM"></jg-avatar>
-
-    </div>
-
-    </div>
-
-        <div class="demo-section">
-        <h2>Chip Examples</h2>
-        
-        <jg-chip label="Lorem ipsum"></jg-avatar>
-
-    </div>
-
-    </div>
-
-    <div class="demo-section">
-        <h2>Progress Bar Examples</h2>
-        
-        <jg-progress value="58" max="100"></jg-progress>
-
-    </div>
+        </footer>
 
 
-    <div class="demo-section">  
-        <h2>ModalExamples</h2>
-        <jg-button id="modalBtn" class="modalBtn" type="primary"> Open modal </jg-button>
-    </div>
+        <script type="module" src="/src/index.js"></script>
 
+        <script>
+            let modalBtn = document.getElementById('modalBtn');
 
-    <script type="module" src="/src/index.ts"></script>
+            let showModal = () => {
+                let modal = document.createElement('jg-modal');
+                modal.setAttribute('title', 'My working Modal');
+                modal.setAttribute('cancelBtn', true);
+                modal.innerHTML = `
+                    <div class="formGroup">
+                        <label for="name"> Name: </label>
+                        <input type="text" id="name">
+                    </div>
+                `;
+                document.body.appendChild(modal);
+            }
 
-    <script>
-        let modalBtn = document.getElementById('modalBtn');
+            modalBtn.addEventListener('click', showModal);
 
-        let showModal = () => {
-        let modal = document.createElement('jg-modal');
-            modal.setAttribute('title', 'My working Modal');
-            modal.setAttribute('cancelBtn', true);
-            modal.innerHTML = `
-                <h1>Hello world</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsum et quo.</p>
-            `;
+            window.addEventListener('button-clicked', (ev) => {
+                if(ev.detail.action === 'default') {
+                    alert('Default button clicked!');
+                }
 
-            document.body.appendChild(modal);
-        }
-
-        modalBtn.addEventListener('click', showModal);
-    </script>
-</body>
+                if(ev.detail.action === 'primary') {
+                    console.log(ev.detail.action);
+                    alert('Primary button clicked!');
+                }
+            });
+        </script>
+    </body>
 </html>

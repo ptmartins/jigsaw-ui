@@ -7,6 +7,10 @@ export class JGModal extends LitElement {
 
     @property({type: String}) title = 'Modal';
     @property({type: Boolean}) cancelBtn = false;
+    @property({type: String}) confirmBtnText = 'Confirm';
+    @property({type: Boolean}) confirmBtn = false;
+    @property({type: String}) killBtnText = 'Delete';
+    @property({type: Boolean}) killBtn = false;
 
     static styles = css`
         :host {
@@ -107,6 +111,8 @@ export class JGModal extends LitElement {
                     </div>
                     <div class="modal__footer"> 
                         ${this.cancelBtn ? html`<button class="btn btn--cancel" @click=${this.closeModal}> Cancel </button>`: ''}
+                        ${this.confirmBtn ? html`<button class="btn btn--confirm" @click=${this.handleConfirm}>${this.confirmBtnText}</button>`: ''}
+                        ${this.killBtn ? html`<button class="btn btn--confirm" @click=${this.handlekill}>${this.killBtnText}</button>`: ''}
                     </div>
                 </div>
             </div>
