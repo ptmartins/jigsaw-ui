@@ -12,7 +12,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "build:demo": "vite build --config vite.demo.config.js",
+    "preview": "vite preview",
+    "preview:demo": "vite preview --config vite.demo.config.js"
   },
   "devDependencies": {
     "typescript": "^5.9.3",
