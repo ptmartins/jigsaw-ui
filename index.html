@@ -8,60 +8,106 @@
     </head>
     <body>
         
-        <header class="header">
-            <h1>Jigsaw UI</h1>
-        </header>
+        <div class="menu">
+            <nav class="menu__nav">
+                <a href="#buttons" class="menu__link">Buttons</a>
+            </nav>
+        </div>
 
-        <main class="main">
+        <div class="demo">
+            <h1 class="title">Component System</h1>
             
-            <div class="demo-section">
-                <h2>Button</h2>
-                
-                <jg-button action="default">Default Button</jg-button>
-                <jg-button action="primary" type="primary">Primary Button</jg-button> 
-                <jg-button type="danger">Danger Button</jg-button>
-                <jg-button type="warning">Warning Button</jg-button>
-                <jg-button type="success">Success Button</jg-button>
-                <jg-button type="primary" size="sm">Button</jg-button>
+            <div class="card theme-switcher">
+                <h2 class="theme-switcher__title">Select Theme</h2>
+                <div class="theme-buttons">
+                    <jg-button id="modalBtn" action="changeTheme" data-theme="light"> Light </jg-button>
+                    <jg-button id="modalBtn" action="changeTheme" data-theme="neutral"> Neutral </jg-button>
+                    <jg-button id="modalBtn" action="changeTheme" data-theme="dark"> Dark </jg-button>
+                </div>
+            </div>  
+
+            <div class="card palette-showcase">
+                <h2>Neutral Palette (0-10)</h2>
+                <div class="palette-grid">
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-0"></div>
+                        <div class="palette-label">White</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-1"></div>
+                        <div class="palette-label">neutral-10</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-2"></div>
+                        <div class="palette-label">neutral-20</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-3"></div>
+                        <div class="palette-label">neutral-30</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-4"></div>
+                        <div class="palette-label">neutral-40</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-5"></div>
+                        <div class="palette-label">neutral-50</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-6"></div>
+                        <div class="palette-label">neutral-60</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-7"></div>
+                        <div class="palette-label">neutral-70</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-8"></div>
+                        <div class="palette-label">neutral-80</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-9"></div>
+                        <div class="palette-label">neutral-90</div>
+                    </div>
+                    <div class="palette-swatch">
+                        <div class="palette-color neutral-10"></div>
+                        <div class="palette-label">Black</div>
+                    </div>
+                </div>
+                </div>
+        
+            <div id="layers" class="demo__section demo__section--layers">
+                <h2 class="section__title">Layering system</h2>
+
+                <div class="box box--level1">
+                    <span>Level 1</span>
+                    <div class="box box--level2">
+                        <span>Level 2</span>
+                        <div class="box box--level3">
+                            <span>Level 3</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>  
+
+            <div id="buttons" class="demo__section demo__section--buttons">
+                <h2 class="section__title">Buttons</h2>
+
+                <div class="buttons-showcase">
+                    <jg-button>Default</jg-button>
+                    <jg-button variant="primary">Primary</jg-button>
+                    <jg-button variant="secondary">Secondary</jg-button>
+                    <jg-button variant="tertiary">Tertiary</jg-button>
+                    <jg-button variant="danger">Danger</jg-button>
+                    <jg-button disabled>Disabled</jg-button>
+                </div>
             </div>
 
-        </main>
-
-        <footer class="footer">
-
-        </footer>
+        </div>  
 
 
-        <script type="module" src="/src/index.js"></script>
-
-        <script>
-            let modalBtn = document.getElementById('modalBtn');
-
-            let showModal = () => {
-                let modal = document.createElement('jg-modal');
-                modal.setAttribute('title', 'My working Modal');
-                modal.setAttribute('cancelBtn', true);
-                modal.innerHTML = `
-                    <div class="formGroup">
-                        <label for="name"> Name: </label>
-                        <input type="text" id="name">
-                    </div>
-                `;
-                document.body.appendChild(modal);
-            }
-
-            modalBtn.addEventListener('click', showModal);
-
-            window.addEventListener('button-clicked', (ev) => {
-                if(ev.detail.action === 'default') {
-                    alert('Default button clicked!');
-                }
-
-                if(ev.detail.action === 'primary') {
-                    console.log(ev.detail.action);
-                    alert('Primary button clicked!');
-                }
-            });
-        </script>
+        <script type="module" src="/src/index.ts"></script>
+        <script src="main.js"></script>
     </body>
 </html>

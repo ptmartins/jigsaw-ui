@@ -1,36 +1,6 @@
 import { css } from 'lit';
 
 export default css`
-    :host {
-        --btn-border-radius: 4px;
-
-        --btn-padding-x: 1rem;
-        --btn-padding-y: .75rem;
-        --btn-sm-padding-x: .75rem;
-        --btn-sm-padding-y: .5rem;
-        --btn-lg-padding-x: 1.25rem;
-        --btn-lg-padding-y: 1rem;
-
-        --btn-bg-color: #222;
-        --btn-bg-color-hover: #000;
-        --btn-color: #fff;
-        --btn-primary-bg-color: #007bff;
-        --btn-primary-bg-color-hover: #0069d9;
-        --btn-primary-color: #fff;
-        --btn-danger-bg-color: #dc3545;
-        --btn-danger-bg-color-hover: #c82333;
-        --btn-danger-color: #fff;
-        --btn-warning-bg-color: #ffc107;
-        --btn-warning-bg-color-hover: #e0a800;
-        --btn-warning-color: #212529;
-        --btn-success-bg-color: #28a745;
-        --btn-success-bg-color-hover: #218838;
-        --btn-success-color: #fff;
-
-        --btn-lg-font-size: 1.2rem;
-        --btn-sm-font-size: .875rem;
-    }
-
     .btn {
         align-items: center; 
         background-color: var(--btn-bg-color);
@@ -41,7 +11,9 @@ export default css`
         display: inline-flex;
         font-size: var(--btn-font-size);
         gap: .5rem;
+        justify-content: center;
         line-height: 1.5;
+        min-width: 80px;
         padding: var(--btn-padding-y) var(--btn-padding-x);
         transition: all .3s ease;
 

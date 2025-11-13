@@ -1,5 +1,6 @@
-import { LitElement, html, css } from 'Lit';
+import { LitElement, html, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import styles from './chip.styles.js';
 
 @customElement('jg-chip')
 
@@ -7,19 +8,12 @@ export class JGChip extends LitElement {
 
     @property({ type: String }) label = '';
 
-    static styles = css`
-        .chip {
-            background-color: #e0e0e0;
-            border-radius: 16px;
-            color: #333;
-            display: inline-block;
-            padding: 6px 12px;
-        }
-    `;
+    static styles = styles;
 
     render() {
         return html`
             <span class="chip"> ${this.label} </span>
         `
     }
-}
+}   
+
