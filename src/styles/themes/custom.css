@@ -1,3 +1,9 @@
 :root {
     /* What we need to override for a client's theme */
+    .theme-custom { 
+        --bg-color: #1e0221;
+        --color: #fff;
+
+        
+    }
 }

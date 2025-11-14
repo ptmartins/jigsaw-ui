@@ -1,7 +1,7 @@
 (function() {
 
     let clearThemes = () => {
-        document.body.classList.remove('theme-light', 'theme-dark', 'theme-neutral');
+        document.body.classList = '';
     }
 
     let setTheme = (theme) => {
