@@ -1,18 +1,6 @@
+@import './src/styles/index.css';
+
 :root {
-
-    --white: #ffffff;
-    --neutral-10: #f8f9fa;
-    --neutral-20: #e9ecef;
-    --neutral-30: #dee2e6;
-    --neutral-40: #ced4da;
-    --neutral-50: #adb5bd;
-    --neutral-60: #868e96;
-    --neutral-70: #495057;
-    --neutral-80: #343a40;
-    --neutral-90: #212529;
-    --black: #000000;
-
-
     --bg-color: var(--white);
     --color: var(--neutral-80);
 
@@ -55,42 +43,6 @@
 
     --btn-lg-font-size: 1.2rem;
     --btn-sm-font-size: .875rem;
-
-    .theme-neutral {
-        --bg-color: var(--neutral-10);
-        --color: var(--neutral-90);
-
-        --bg-color-l1: var(--white);
-        --color-l1: var(--neutral-80);
-        --border-l1: 1px solid var(--neutral-30);
-
-        --bg-color-l2: var(--neutral-10);
-        --color-l2: var(--neutral-90);
-        --border-l2: 1px solid var(--neutral-30);
-
-        --bg-color-l3: var(--white);
-        --color-l3: var(--neutral-80);
-        --border-l3: 1px solid var(--neutral-30);
-    }
-
-    .theme-dark {
-        --bg-color: var(--neutral-90);
-        --color: var(--white);
-
-        --bg-color-l1: var(--neutral-80);
-        --color-l1: var(--white);
-        --border-l1: 1px solid var(--neutral-70);
-
-        --bg-color-l2: var(--neutral-70);
-        --color-l2: var(--white);
-        --border-l2: 1px solid var(--neutral-80);
-
-        --bg-color-l3: var(--neutral-60);
-        --color-l3: var(--white);
-        --border-l3: 1px solid var(--neutral-70);
-    }
-
-
 }
 
 

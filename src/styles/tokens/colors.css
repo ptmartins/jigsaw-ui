@@ -1,0 +1,24 @@
+:root {
+  /* Neutrals palette */
+  --white: #ffffff;
+  --neutral-10: #f8f9fa;
+  --neutral-20: #e9ecef;
+  --neutral-30: #dee2e6;
+  --neutral-40: #ced4da;
+  --neutral-50: #adb5bd;
+  --neutral-60: #868e96;
+  --neutral-70: #495057;
+  --neutral-80: #343a40;
+  --neutral-90: #212529;
+  --black: #000000;
+
+  /* States palette */
+  --primary: #007bff;
+  --primary-hover: #0069d9;
+  --danger: #dc3545;
+  --danger-hover: #c82333;
+  --warning: #ffc107;
+  --warning-hover: #e0a800;
+  --success: #28a745;
+  --success-hover: #218838;
+}
