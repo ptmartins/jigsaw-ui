@@ -1,0 +1,12 @@
+:root {
+    --avatar-bg-color: #bcbcbc;    
+    --avatar-color: #1f1f1f;
+    
+    /* Size tokens */
+    --avatar-sm-size: 32px;
+    --avatar-sm-font-size: 0.875rem;
+    --avatar-md-size: 48px;
+    --avatar-md-font-size: 1rem;
+    --avatar-lg-size: 64px;
+    --avatar-lg-font-size: 1.25rem;
+}

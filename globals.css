@@ -41,6 +41,12 @@ body {
     margin-block-end: 3rem;
 }
 
+.showcase {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+}
+
 .menu {
     height: 100vh;
     inset-block-start: 0;
