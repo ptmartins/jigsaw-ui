@@ -13,7 +13,7 @@ export default css`
     .progress {
         background-color: var(--progress-bar-bg-color);
         border-radius: 4px;
-        height: 8px;
+        height: 12px;
         width: 100%;
     }
 
