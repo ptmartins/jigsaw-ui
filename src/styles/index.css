@@ -1,7 +1,7 @@
 @import './tokens/layers.css';
+@import './tokens/colors.css';
 @import './themes/dark.css';
 @import './themes/neutral.css';
 @import './themes/custom.css';
 @import './tokens/avatar.css';
-@import './tokens/colors.css';
 @import './tokens/buttons.css';

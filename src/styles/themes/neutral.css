@@ -1,19 +1,16 @@
-:root {
+.theme-neutral {
+    --bg-color: var(--neutral-10);
+    --color: var(--neutral-90);
 
-    .theme-neutral {
-        --bg-color: var(--neutral-10);
-        --color: var(--neutral-90);
+    --bg-color-l1: var(--white);
+    --color-l1: var(--neutral-80);
+    --border-l1: 1px solid var(--neutral-30);
 
-        --bg-color-l1: var(--white);
-        --color-l1: var(--neutral-80);
-        --border-l1: 1px solid var(--neutral-30);
+    --bg-color-l2: var(--neutral-10);
+    --color-l2: var(--neutral-90);
+    --border-l2: 1px solid var(--neutral-30);
 
-        --bg-color-l2: var(--neutral-10);
-        --color-l2: var(--neutral-90);
-        --border-l2: 1px solid var(--neutral-30);
-
-        --bg-color-l3: var(--white);
-        --color-l3: var(--neutral-80);
-        --border-l3: 1px solid var(--neutral-30);
-    }
+    --bg-color-l3: var(--white);
+    --color-l3: var(--neutral-80);
+    --border-l3: 1px solid var(--neutral-30);
 }
