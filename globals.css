@@ -22,7 +22,8 @@ body {
 }
 
 .demo {
-    margin: 0 auto;
+    margin-block: 0;
+    margin-inline: 349px auto;
     max-width: 1200px;
 }
 
@@ -52,9 +53,10 @@ body {
     height: 100vh;
     inset-block-start: 0;
     inset-inline-start: 0;
-    padding: 3rem;
+    padding-block: 3rem;
+    padding-inline: 1.5rem;
     position: fixed;
-    width: 340px;
+    width: 300px;
 }
 
 .menu__link {
