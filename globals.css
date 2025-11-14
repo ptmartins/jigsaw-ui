@@ -42,9 +42,10 @@ body {
 }
 
 .showcase {
+    align-items: center;
     display: flex;
-    gap: .75rem;
     flex-wrap: wrap;
+    gap: .75rem;
 }
 
 .menu {
