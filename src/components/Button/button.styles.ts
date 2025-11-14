@@ -23,7 +23,7 @@ export default css`
     }
 
     .btn:disabled {
-        opacity: 0.5;
+        opacity: .4;
         pointer-events: none;
     }
 
