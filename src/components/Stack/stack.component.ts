@@ -1,11 +1,12 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 
-@customElement("jg-group")
+@customElement("jg-stack")
 
-export class JGGroup extends LitElement {
+export class JGStack extends LitElement {
 
     @property({ type: String }) gap = '0';
+    @property({ type: String }) direction = 'row'; // row | column
 
     static styles = css`
         :host {
@@ -24,6 +25,7 @@ export class JGGroup extends LitElement {
     connectedCallback() {
         super.connectedCallback();
         this.style.setProperty('--gap', this.gap);
+        this.style.setProperty('flex-direction', this.direction);
     }
 
     render() {

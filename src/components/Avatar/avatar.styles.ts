@@ -1,4 +1,3 @@
-// Alternative avatar.styles.ts using tokens
 import { css } from 'lit';
 
 export default css`

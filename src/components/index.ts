@@ -1,7 +1,7 @@
 export { JGAvatar } from './Avatar/avatar.component.js';
 export { JGButton } from './Button/button.component.js';
 export { JGChip } from './Chip/chip.component.js';
-export { JGGroup } from './jg-group.js';
+export { JGStack } from './Stack/stack.component.js';
 export { JGIcon } from './Icon/icon.component.js';
-export { JGModal } from './jg-modal.js';
-export { JGProgress } from './jg-progress.js';
+export { JGModal } from './Modal/modal.component.js';
+export { JGProgress } from './Progress/progress.component.js';
