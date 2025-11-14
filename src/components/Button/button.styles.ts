@@ -18,7 +18,7 @@ export default css`
         transition: all .3s ease;
 
         &:hover {
-        background-color: var(--btn-bg-color-hover);
+            background-color: var(--btn-bg-color-hover);
         }
     }
 
