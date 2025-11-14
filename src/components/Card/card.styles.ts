@@ -1,18 +1,6 @@
 import { css } from 'lit';
 
 export default css`
-
-    :host {
-        --card-bg-color: var(--bg-color-l1);
-        --card-color: var(--color-l1);
-        --card-border: var(--border-l1);
-        --card-border-radius: 8px;
-        --card-box-shadow: none;
-
-        --card-box-shadow-hover: 0 4px 6px rgba(0, 0, 0, .1);
-    }
-
-
     .card {
         background-color: var(--card-bg-color);
         border: var(--card-border);
@@ -22,6 +10,11 @@ export default css`
         padding: 1.5rem;
         transition: box-shadow .3s ease;
     }
+
+    ::slotted([slot="title"]) {
+        color: var(--card-title-color);
+    }
+
 
     .card:hover {
         box-shadow: var(--card-box-shadow-hover);

@@ -1,0 +1,9 @@
+:root {
+    --card-bg-color: var(--bg-color-l1);
+    --card-color: var(--color-l1);
+    --card-border: var(--border-l1);
+    --card-border-radius: 8px;
+    --card-box-shadow: none;
+
+    --card-box-shadow-hover: 0 4px 6px rgba(0, 0, 0, .1);
+}  
