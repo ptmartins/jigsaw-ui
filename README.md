@@ -84,18 +84,34 @@ npm run preview
 
 ```
 jigsaw-ui/
-├── src/                      # Source files
-│   ├── components/
-│   │   ├── 
-│   │   ├── 
-│   │   ├── 
-│   │   └── index.ts          # Component exports
-│   └── index.ts              # Main entry point
-├── dist/                     # Built files
-├── package.json
-├── tsconfig.json
-├── vite.config.js
-└── README.md
+├── src/                         # Source files
+│   ├── components/              # Component definitions
+│   │   └── index.ts             # Component exports
+│   ├── styles/                  # Styling system
+│   │   ├── themes/              # Theme definitions
+│   │   │   ├── custom.css       # Custom theme
+│   │   │   ├── dark.css         # Dark theme
+│   │   │   └── neutral.css      # Neutral theme
+│   │   ├── tokens/              # Design tokens
+│   │   │   ├── avatar.css       # Avatar tokens
+│   │   │   ├── buttons.css      # Button tokens
+│   │   │   ├── colors.css       # Color palette
+│   │   │   └── layers.css       # Layer system
+│   │   └── index.css            # Main styles entry
+│   └── index.ts                 # Main library entry point
+├── public/                      # Public demo assets
+│   └── main.js                  # Demo application
+├── assets/                      # Static assets
+│   └── logo.png                 # Project logo
+├── dist/                        # Built files (generated)
+├── globals.css                  # Global demo styles
+├── index.html                   # Demo HTML
+├── package.json                 # Project configuration
+├── tsconfig.json                # TypeScript configuration
+├── vite.config.js               # Build configuration
+├── vite.demo.config.js          # Demo build configuration
+├── vercel.json                  # Deployment configuration
+└── README.md                    # This file
 ```
 
 ## Browser Support
