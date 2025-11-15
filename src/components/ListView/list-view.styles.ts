@@ -2,17 +2,16 @@ import { css } from 'lit';
 
 export default css`
   .list-view {
-    display: flex;
     align-items: center;
-    width: 100%;
+    background-color: var(--list-view-bg-color);
+    border: var(--list-view-border);
+    border-radius: var(--list-view-border-radius, 8px);
+    color: var(--list-view-color);
+    display: flex;
+    gap: var(--list-view-gap, 12px);
     min-height: var(--list-view-min-height, 64px);
     padding: var(--list-view-padding, 12px);
-    background-color: var(--list-view-bg-color, var(--bg-color-l2, #ffffff));
-    border: var(--list-view-border, var(--border-l2, 1px solid #dee2e6));
-    border-radius: var(--list-view-border-radius, 0);
-    color: var(--list-view-color, var(--color-l2, #212529));
-    transition: var(--list-view-transition, background-color 0.2s ease, box-shadow 0.2s ease);
-    gap: var(--list-view-gap, 12px);
+    width: 100%;
   }
 
   .list-view--clickable {
@@ -28,16 +27,18 @@ export default css`
     background-color: var(--list-view-bg-color-active, var(--bg-color-l3, #e9ecef));
   }
 
-  /* Thumbnail zone */
   .list-view__thumbnail {
     flex-shrink: 0;
     width: var(--list-view-thumbnail-size, 48px);
     height: var(--list-view-thumbnail-size, 48px);
     border-radius: var(--list-view-thumbnail-border-radius, 4px);
     overflow: hidden;
-    background-color: var(--list-view-thumbnail-bg, var(--bg-color-l1, #f8f9fa));
+
     display: flex;
+    
     align-items: center;
+    background-color: var(--list-view-thumbnail-bg);
+
     justify-content: center;
   }
 

@@ -1,0 +1,5 @@
+* {
+    --list-view-bg-color: var(--bg-color-l1);
+    --list-view-border: var(--border-l1);
+    --list-view-color: var(--color-l1);
+}

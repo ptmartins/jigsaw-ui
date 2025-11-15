@@ -2,11 +2,22 @@
 
     let clearThemes = () => {
         document.body.classList = '';
+
+        const themeButtons = document.querySelectorAll('jg-button[data-theme]');
+        themeButtons.forEach(btn => {
+            btn.removeAttribute('type');
+            btn.classList.remove('btn--active');
+        });
     }
 
     let setTheme = (theme) => {
         clearThemes();
         document.body.classList.add('theme-' + theme);
+        
+        const activeButton = document.querySelector(`jg-button[data-theme="${theme}"]`);
+        if (activeButton) {
+            activeButton.setAttribute('type', 'primary');
+        }
     }
 
     window.addEventListener('button-clicked', ev => {
@@ -69,6 +80,8 @@
 
     window.addEventListener('load', () => {
         createCardsWithProperties();
+        // Set initial active theme (default to 'light')
+        setTheme('light');
     });
 })();
 
