@@ -11,6 +11,7 @@ export class JGButton extends LitElement {
   @property({ type: String }) size = 'md';            // sm | md | lg | cta
   @property({ type: String }) type = '';              // primary | danger | warning | success
   @property({ type: String }) variant = 'system';     // system | modal
+  @property({ type: String }) width = 'auto';         // auto | full
 
 
   static styles = styles;
@@ -28,6 +29,10 @@ export class JGButton extends LitElement {
 
     if (this.size !== 'md') {
       classes.push(`btn--${this.size}`);
+    }
+
+    if (this.width === 'full') {
+      classes.push('btn--full-width');
     }
 
     return classes.join(' '); 

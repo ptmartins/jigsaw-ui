@@ -23,9 +23,10 @@ body {
 .demo {
     margin-block: 0;
     margin-inline: 200px auto;
-    max-width: 1200px;
+    max-width: 1240px;
     padding-block: 3rem;
-    padding-inline: 1.5rem;
+    padding-inline: 3rem;
+    width: calc(100% - 200px);
 }
 
 .demo__section {
@@ -64,6 +65,11 @@ body {
 }
 
 .menu {
+    background-color: var(--bg-color-l1);
+    border: var(--border-l1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     inset-block-start: 0;
     inset-inline-start: 0;
@@ -88,20 +94,14 @@ body {
 }
 
 .theme-switcher {
-    border-radius: 8px;
-    margin-block-end: 5rem;
-    padding: 1.5rem;
-}
-
-.theme-switcher__title {
-    font-size: 1.3rem;
-    margin-block-end: 1rem;
-}
-
-.theme-buttons {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: .75rem;
+    margin-block-start: auto;
+
+    jg-button {
+        width: 100%;
+    }
 }
 
 /* Layers */

@@ -82,4 +82,8 @@ export default css`
         font-size: var(--btn-sm-font-size);
         padding: var(--btn-sm-padding-y) var(--btn-sm-padding-x);
     }
+
+    .btn--full-width {
+        width: 100%;
+    }
 `;
