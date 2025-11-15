@@ -48,7 +48,16 @@ body {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
-    gap: .75rem;
+    gap: .75rem; 
+}
+
+.showcase--list {
+    display: flex;
+    flex-direction: column;
+
+    & > * {
+        flex-grow: 1;
+    }
 }
 
 /* Card-specific showcase styling */
@@ -62,6 +71,17 @@ body {
 .demo__section--cards jg-card {
     width: 100%;
     max-width: 400px;
+}
+
+/* ListView-specific showcase styling */
+.demo__section--list-view .showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.demo__section--list-view jg-list-view {
+    width: 100%;
 }
 
 .menu {

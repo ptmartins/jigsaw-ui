@@ -19,6 +19,11 @@
         }
     });
 
+    // Handle ListView clicks
+    window.addEventListener('jg-click', ev => {
+        console.log('ListView clicked:', ev.detail);
+    });
+
     // Simulate CMS data and dynamically create cards
     const cmsData = [
         {

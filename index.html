@@ -15,6 +15,7 @@
                 <a href="#card" class="menu__link">Card</a>
                 <a href="#chips" class="menu__link">Chip</a>
                 <a href="#icon" class="menu__link">Icon</a>
+                <a href="#list-view" class="menu__link">List View</a>
                 <a href="#progress" class="menu__link">Progress bar</a>
             </nav>
             <div class="theme-switcher">
@@ -76,7 +77,7 @@
                         <div class="palette-label">Black</div>
                     </div>
                 </div>
-                </div>
+            </div>
         
             <div id="layers" class="demo__section demo__section--layers">
                 <h2 class="section__title">Layering system</h2>
@@ -118,15 +119,6 @@
                 </div>
             </div>
 
-            <!-- Card -->
-            <div id="card" class="demo__section demo__section--cards">
-                <h2 class="section__title">Card</h2>
-
-                <div class="showcase" id="dynamic-cards">
-                    
-                </div>
-            </div>
-
             <!-- Icon -->
             <div id="icon" class="demo__section demo__section--icons">
                 <h2 class="section__title">Icon</h2>
@@ -137,7 +129,6 @@
                     <jg-icon name="mail" size="3em"></jg-icon>   
                 </div>
             </div>
-
 
             <!-- Progress -->
             <div id="progress" class="demo__section demo__section--progress">
@@ -151,8 +142,31 @@
                 </div>
             </div>
 
-        </div>  
+            <!-- Card -->
+            <div id="card" class="demo__section demo__section--cards">
+                <h2 class="section__title">Card</h2>
 
+                <div class="showcase" id="dynamic-cards">
+                    
+                </div>
+            </div>
+
+            <!-- List View -->
+            <div id="list-view" class="demo__section demo__section--list-view">
+                <h2 class="section__title">List View</h2>
+
+                <div class="showcase showcase--list">
+                    <jg-list-view 
+                        thumbnail="https://picsum.photos/300/200?random=16" 
+                        thumbnailAlt="User avatar"
+                        header="John Doe"
+                        content="Software Engineer at Tech Corp"
+                        clickable>
+                        <jg-button slot="actions" variant="primary" size="sm">Follow</jg-button>
+                    </jg-list-view>
+                </div>
+            </div>
+        </div>  
 
         <script type="module" src="/src/index.ts"></script>
         <script src="/main.js"></script>

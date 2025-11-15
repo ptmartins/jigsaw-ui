@@ -4,5 +4,6 @@ export { JGCard } from './Card/card.component.js';
 export { JGChip } from './Chip/chip.component.js';
 export { JGStack } from './Stack/stack.component.js';
 export { JGIcon } from './Icon/icon.component.js';
+export { JGListView } from './ListView/list-view.component.js';
 export { JGModal } from './Modal/modal.component.js';
 export { JGProgress } from './Progress/progress.component.js';
