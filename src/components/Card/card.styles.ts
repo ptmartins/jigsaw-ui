@@ -7,11 +7,40 @@ export default css`
         border-radius: var(--card-border-radius, 8px);
         box-shadow: var(--card-box-shadow, none);
         color: var(--card-color, var(--color-l1, #343a40));
-        padding: 1.5rem;
+        overflow: hidden;
         transition: box-shadow .3s ease;
         
         /* Debug info overlay */
         position: relative;
+    }
+
+    .card__thumbnail {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .card__thumbnail img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card__body {
+        padding: 1.5rem;
+    }
+
+    .card__title {
+        margin: 0 0 1rem 0;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: var(--card-title-color, inherit);
+    }
+
+    .card__content {
+        margin: 0;
+        line-height: 1.6;
     }
     
     .card::before {
