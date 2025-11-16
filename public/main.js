@@ -2,11 +2,19 @@
 
     let DOM = {};
 
+    /**
+     * Cache DOM elements
+     * @return {void}
+     */
     let cacheDOM = () => {
         DOM.menuLinks = document.querySelectorAll('.menu__link');
         DOM.demoComponent = document.querySelector('.demo__component');
     }
 
+    /**
+     * Clear existing themes
+     * @return {void}
+     */
     let clearThemes = () => {
         const themeButtons = document.querySelectorAll('jg-button[data-theme]');
 
@@ -18,6 +26,10 @@
         });
     }
 
+    /**
+     * Set the selected theme
+     * @param {*} theme 
+     */
     let setTheme = (theme) => {
         clearThemes();
         document.body.classList.add('theme-' + theme);
@@ -28,6 +40,10 @@
         }
     }
 
+    /**
+     * Render Avatar View
+     * @return {void}
+     */
     let renderAvatarView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--avatars">
@@ -41,6 +57,10 @@
         `;
     }
 
+    /**
+     * Render Button View
+     * @return {void}
+     */
     let renderButtonView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--buttons">
@@ -50,13 +70,17 @@
                     <jg-button type="primary">Primary</jg-button>
                     <jg-button type="success">Success</jg-button>
                     <jg-button type="danger">Danger</jg-button>
+                    <jg-button type="warning">Warning</jg-button>
+                    <jg-button disabled>Disabled</jg-button>
                 </div>  
             </div>
         `;
     }
 
-    // Additional render functions for other components would go here...
-
+    /**
+     * Render Card View
+     * @return {void}
+     */
     let renderCardView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--cards">
@@ -70,6 +94,10 @@
         createCardsWithProperties();
     }
 
+    /**
+     * Render Chip View
+     * @return {void}
+     */
     let renderChipView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--chips">
@@ -84,6 +112,10 @@
         `;
     }           
 
+    /**
+     * Render Icon View
+     * @return {void}
+     */
     let renderIconView = () => {
         DOM.demoComponent.innerHTML = `
             <h2 class="section__title">Icon</h2>
@@ -95,19 +127,36 @@
         `;
     }
 
+
+    /**
+     * Render List View
+     * @return {void}
+     */
     let renderListView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--list-view">
                 <h2 class="section__title">List View</h2>
                 <div class="showcase showcase--list">
-                    <jg-list-view header="Item 1" content="First item"></jg-list-view>
-                    <jg-list-view data-position="second" header="Item 2" content="Second item"></jg-list-view>
-                    <jg-list-view header="Item 3" content="Third item"></jg-list-view>
+                    <jg-list-view thumbnail="https://picsum.photos/50/50?random=1" header="Item 1" content="First item"> 
+                        <div slot="actions">
+                            <jg-button slot="action" type="primary" size="sm">Action</jg-button>
+                        </div>
+                    </jg-list-view>
+                    <jg-list-view thumbnail="https://picsum.photos/50/50?random=2" data-position="second" header="Item 2" content="Second item">
+                        <div slot="actions">
+                            <jg-icon slot="action" name="keyboard_arrow_right" size="32px"></jg-icon>
+                        </div>
+                    </jg-list-view>
+                    <jg-list-view thumbnail="https://picsum.photos/50/50?random=3" header="Item 3" content="Third item"></jg-list-view>
                 </div>
             </div>
         `;
     }
 
+    /**
+     * Render Progress View
+     * @return {void}
+     */
     let renderProgressView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--progress">
@@ -122,6 +171,11 @@
         `;
     }   
 
+    /**
+     * Render Component View 
+     * @param {*} component 
+     * @return {void}
+     */
     let renderComponentView = (component) => {
         switch(component) {
             case 'avatar':
@@ -150,6 +204,7 @@
         }
     }
 
+    // Event listener for theme change
     window.addEventListener('button-clicked', ev => {
         if(ev.detail.action === 'changeTheme') {
             let theme = ev.target.getAttribute('data-theme');
@@ -161,10 +216,12 @@
     });
 
 
+    // Event listener for ListView clicks
     window.addEventListener('jg-click', ev => {
         console.log('ListView clicked:', ev.detail);
     });
 
+    // Sample data for cards
     const cmsData = [
         {
             id: 1,
@@ -192,6 +249,10 @@
         }
     ];
 
+    /**
+     * Create cards with properties from cmsData
+     * @return {void}
+     */
     function createCardsWithProperties() {
         const container = document.getElementById('cards');
 
@@ -210,11 +271,13 @@
     }
 
 
+    // Initialize on window load
     window.addEventListener('load', () => {
         cacheDOM();
         createCardsWithProperties();
         setTheme('light');
 
+        // Menu link event listeners
         DOM.menuLinks.forEach(link => {
             link.addEventListener('click', ev => {
                 ev.preventDefault();
