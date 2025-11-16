@@ -7,7 +7,6 @@ export class JGListView extends LitElement {
 
   static styles = styles;
 
-  // Properties for simple data binding
   @property({ type: String }) thumbnail = '';
   @property({ type: String }) thumbnailAlt = '';
   @property({ type: String }) header = '';
