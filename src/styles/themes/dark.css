@@ -1,17 +1,17 @@
    
 .theme-dark {
-    --bg-color: var(--neutral-90);
+    --bg-color: var(--neutral-900);
     --color: var(--white);
 
-    --bg-color-l1: var(--neutral-80);
+    --bg-color-l1: var(--neutral-800);
     --color-l1: var(--white);
-    --border-l1: 1px solid var(--neutral-70);
+    --border-l1: 1px solid var(--neutral-700);
 
-    --bg-color-l2: var(--neutral-70);
+    --bg-color-l2: var(--neutral-700);
     --color-l2: var(--white);
-    --border-l2: 1px solid var(--neutral-80);
+    --border-l2: 1px solid var(--neutral-800);
 
-    --bg-color-l3: var(--neutral-60);
+    --bg-color-l3: var(--neutral-600);
     --color-l3: var(--white);
-    --border-l3: 1px solid var(--neutral-70);
+    --border-l3: 1px solid var(--neutral-600);
 }
