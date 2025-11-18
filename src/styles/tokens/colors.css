@@ -1,15 +1,15 @@
 :root {
   /* Neutrals palette */
-  --white: #ffffff;
-  --neutral-10: #f8f9fa;
-  --neutral-20: #e9ecef;
-  --neutral-30: #dee2e6;
-  --neutral-40: #ced4da;
-  --neutral-50: #adb5bd;
-  --neutral-60: #868e96;
-  --neutral-70: #495057;
-  --neutral-80: #343a40;
-  --neutral-90: #212529;
+  --white: #ffffff;     
+  --neutral-100: #fdfdfd;
+  --neutral-200: #f8f8f8;     
+  --neutral-300: #e6e6e6;     
+  --neutral-400: #d5d5d5;     
+  --neutral-500: #b1b1b1;     
+  --neutral-600: #909090;     
+  --neutral-700: #6d6d6d;     
+  --neutral-800: #464646;     
+  --neutral-900: #212121;       
   --black: #000000;
 
   /* States palette */
@@ -23,17 +23,17 @@
   --success-hover: #218838;
 
   --bg-color: var(--white);
-  --color: var(--neutral-80);
+  --color: var(--neutral-800);
 
-  --bg-color-l1: var(--neutral-10);
-  --color-l1: var(--neutral-80);
-  --border-l1: 1px solid var(--neutral-30);
+  --bg-color-l1: var(--neutral-100);
+  --color-l1: var(--neutral-800);
+  --border-l1: 1px solid var(--neutral-300);
 
   --bg-color-l2: var(--white);
-  --color-l2: var(--neutral-90);
-  --border-l2: 1px solid var(--neutral-30);
+  --color-l2: var(--neutral-900);
+  --border-l2: 1px solid var(--neutral-300);
 
-  --bg-color-l3: var(--neutral-20);
-  --color-l3: var(--neutral-80);
-  --border-l3: 1px solid var(--neutral-30);
+  --bg-color-l3: var(--neutral-200);
+  --color-l3: var(--neutral-800);
+  --border-l3: 1px solid var(--neutral-300);
 }
