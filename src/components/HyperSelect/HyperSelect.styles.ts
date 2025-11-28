@@ -39,48 +39,6 @@ export default css`
         align-items: center;
     }
     
-    /* Individual selected item (tag) */
-    .item {
-        display: inline-flex;
-        align-items: center;
-        gap: 4px;
-        background-color: #e3f2fd;
-        border: 1px solid #90caf9;
-        border-radius: 3px;
-        padding: 4px 8px;
-        font-size: 13px;
-        color: #1976d2;
-        transition: all 0.2s ease;
-    }
-    
-    .item.active {
-        background-color: #1976d2;
-        color: white;
-        border-color: #1565c0;
-    }
-    
-    .item-label {
-        user-select: none;
-    }
-    
-    .item .remove {
-        cursor: pointer;
-        font-size: 18px;
-        line-height: 1;
-        opacity: 0.7;
-        transition: opacity 0.2s ease;
-        font-weight: bold;
-        padding: 0 2px;
-    }
-    
-    .item .remove:hover {
-        opacity: 1;
-    }
-    
-    .item.active .remove {
-        opacity: 1;
-    }
-    
     /* Input field */
     .input {
         border: none;
@@ -103,25 +61,6 @@ export default css`
     
     .input::placeholder {
         color: #999;
-    }
-    
-    /* Loading indicator */
-    .loading-indicator {
-        position: absolute;
-        right: 10px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 20px;
-        height: 20px;
-        border: 2px solid rgba(0, 0, 0, 0.1);
-        border-top-color: #007bff;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-    }
-    
-    @keyframes spin {
-        0% { transform: translateY(-50%) rotate(0deg); }
-        100% { transform: translateY(-50%) rotate(360deg); }
     }
     
     /* Dropdown */

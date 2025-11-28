@@ -1,6 +1,8 @@
 import { html, css, LitElement } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import style from "./HyperSelect.styles.js";
+import "./HyperSelectTag.js";
+import "./HyperSelectSpinner.js";
 
 @customElement("iw-hyperselect")
 export class HyperSelect extends LitElement {
@@ -272,15 +274,6 @@ export class HyperSelect extends LitElement {
     }
 
     /**
-     * Handles remove item click
-     * @private
-     */
-    private handleRemoveItem(e: MouseEvent, item: any) {
-        e.stopPropagation();
-        this.removeItem(item);
-    }
-
-    /**
      * Handles control click
      * @private
      */
@@ -548,15 +541,12 @@ export class HyperSelect extends LitElement {
                     ${this.multiple ? html`
                         <div class="items">
                             ${this.selectedOptions.map((item, index) => html`
-                                <div class="item ${this.activeItemIndex === index ? 'active' : ''}" 
-                                     data-value="${item[this.valueField]}">
-                                    <span class="item-label">${item[this.labelField]}</span>
-                                    <span class="remove" 
-                                          @click="${(e: MouseEvent) => this.handleRemoveItem(e, item)}"\
-                                          title="Remove">
-                                        ×
-                                    </span>
-                                </div>
+                                <iw-hyperselect-tag
+                                    .label="${item[this.labelField]}"
+                                    .value="${item[this.valueField]}"
+                                    .active="${this.activeItemIndex === index}"
+                                    @remove="${() => this.removeItem(item)}"
+                                ></iw-hyperselect-tag>
                             `)}
                             ${!isMaxItemsReached ? html`
                                 <input class="input"
@@ -579,7 +569,7 @@ export class HyperSelect extends LitElement {
                             @keydown="${this.handleKeyDown}"
                         />
                     `}
-                    ${this.isLoading ? html`<div class="loading-indicator" title="Loading options..."></div>` : ''}
+                    ${this.isLoading ? html`<iw-hyperselect-spinner title="Loading options..."></iw-hyperselect-spinner>` : ''}
                 </div>
                 
                 ${this.isOpen ? html`
