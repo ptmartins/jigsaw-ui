@@ -181,7 +181,7 @@ export class HyperSelect extends LitElement {
     render() {
         return html`
             <div class="hyperselect-container">
-                <div class="input-container">
+
                     <input class="input"
                         placeholder="${this.placeholder}"
                         .value="${this.inputValue}"
@@ -190,7 +190,7 @@ export class HyperSelect extends LitElement {
                         @input="${this.handleInput}"
                     />
                     ${this.isLoading ? html`<div class="loading-indicator" title="Loading options..."></div>` : ''}
-                </div>
+
                 
                 ${this.isOpen ? html`
                     <div class="dropdown">

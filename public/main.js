@@ -172,6 +172,110 @@
     }   
 
     /**
+     * Render Hyperselect View
+     * @return {void}
+     */
+    renderHyperselectView = () => {
+        DOM.demoComponent.innerHTML = `
+            <div class="demo__section demo__section--hyperselect">
+                <h2 class="section__title">Hyperselect</h2>
+                <div class="showcase">
+                    <iw-hyperselect placeholder="Select an option" apiConfig="https://jsonplaceholder.typicode.com/users"></iw-hyperselect>
+                </div>
+            </div>
+        `;
+    }
+
+    /**
+     * Render Palette View
+     * @return {void}
+     */
+    renderPaletteView = () => {
+        DOM.demoComponent.innerHTML = `
+            <div class="demo__section demo__section--palette">
+                <h2 class="section__title">Palette</h2>
+                <div class="showcase">
+                    <div class="card palette-showcase" style="width: 100%;">
+                        <h2>Neutral Palette (0-1000)</h2>
+                        <div class="palette-grid">
+                            <div class="palette-swatch">
+                                <div class="palette-color white"></div>
+                                <div class="palette-label">White</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-100"></div>
+                                <div class="palette-label">neutral-100</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-200"></div>
+                                <div class="palette-label">neutral-200</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-300"></div>
+                                <div class="palette-label">neutral-300</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-400"></div>
+                                <div class="palette-label">neutral-400</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-500"></div>
+                                <div class="palette-label">neutral-500</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-600"></div>
+                                <div class="palette-label">neutral-600</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-700"></div>
+                                <div class="palette-label">neutral-700</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-800"></div>
+                                <div class="palette-label">neutral-800</div>
+                            </div>  
+                            <div class="palette-swatch">
+                                <div class="palette-color neutral-900"></div>
+                                <div class="palette-label">neutral-900</div>
+                            </div>
+                            <div class="palette-swatch">
+                                <div class="palette-color black"></div>
+                                <div class="palette-label">Black</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
+    /**
+     * Render Layering System View
+     * @return {void}
+     */
+    renderLayersView = () => {
+        DOM.demoComponent.innerHTML = `
+            <div class="demo__section demo__section--layers">
+                <h2 class="section__title">Layering System</h2>
+                <div class="showcase">
+                    <div id="layers" class="demo__section demo__section--layers">
+                        <div class="box box--level1">
+                            <span>Level 1</span>
+                            <div class="box box--level2">
+                                <span>Level 2</span>
+                                <div class="box box--level3">
+                                    <span>Level 3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>  
+                </div>
+            </div>
+        `;
+    }
+
+    /**
      * Render Component View 
      * @param {*} component 
      * @return {void}
@@ -198,6 +302,15 @@
                 break;
             case 'progress':
                 renderProgressView();
+                break;
+            case 'hyperselect':
+                renderHyperselectView();
+                break;
+            case 'palette':
+                renderPaletteView();
+                break;
+            case 'layers':
+                renderLayersView();
                 break;
             default:
                 DOM.demoComponent.innerHTML = '<p>Select a component from the menu to see its demo.</p>';

@@ -1,16 +1,25 @@
 import { css } from 'lit';
 
 export default css`
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :host {
+        width: 100%;
+    }
+
+    .hyperselect-container {
+        position: relative;
+        width: 100%;
+    }
+    
     .input {
         border: 1px solid #d8dfe6;
         padding: 10px;
         width: 100%;
-    }
-    
-    .input-container {
-        position: relative;
-        display: flex;
-        align-items: center;
     }
     
     .loading-indicator {
@@ -35,7 +44,9 @@ export default css`
         max-height: 200px;
         overflow-y: auto;
         background-color: white;
-        z-index: 100;
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
     }
     
     .option {

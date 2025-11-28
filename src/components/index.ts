@@ -7,3 +7,4 @@ export { JGIcon } from './Icon/icon.component.js';
 export { JGListView } from './ListView/list-view.component.js';
 export { JGModal } from './Modal/modal.component.js';
 export { JGProgress } from './Progress/progress.component.js';
+export { HyperSelect } from './HyperSelect/HyperSelect.js';
