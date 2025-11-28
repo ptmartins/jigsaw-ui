@@ -178,12 +178,65 @@
     renderHyperselectView = () => {
         DOM.demoComponent.innerHTML = `
             <div class="demo__section demo__section--hyperselect">
-                <h2 class="section__title">Hyperselect</h2>
-                <div class="showcase">
-                    <iw-hyperselect placeholder="Select an option" apiConfig="https://jsonplaceholder.typicode.com/users"></iw-hyperselect>
+                <h2 class="section__title">HyperSelect - Selectize.js Features</h2>
+                
+                <div class="showcase showcase--list">
+                    
+                    <!-- Single Select with API -->
+                    <div style="width: 100%;">
+                        <h3 style="margin-bottom: 10px;">Single Select (API Data)</h3>
+                        <iw-hyperselect 
+                            id="single-select"
+                            placeholder="Select a user" 
+                            apiURL="https://jsonplaceholder.typicode.com/users"
+                            labelField="name"
+                            valueField="id">
+                        </iw-hyperselect>
+                    </div>
+
+                    <!-- Multi-Select -->
+                    <div style="width: 100%;">
+                        <h3 style="margin-bottom: 10px;">Multi-Select with Tags</h3>
+                        <iw-hyperselect 
+                            id="multi-select"
+                            placeholder="Select multiple users" 
+                            apiURL="https://jsonplaceholder.typicode.com/users"
+                            labelField="name"
+                            valueField="id"
+                            multiple
+                            hideSelected>
+                        </iw-hyperselect>
+                    </div>
+
+                    <!-- Multi-Select with Max Items -->
+                    <div style="width: 100%;">
+                        <h3 style="margin-bottom: 10px;">Multi-Select (Max 3 items)</h3>
+                        <iw-hyperselect 
+                            id="max-items-select"
+                            placeholder="Select up to 3 users" 
+                            apiURL="https://jsonplaceholder.typicode.com/users"
+                            labelField="name"
+                            valueField="id"
+                            multiple
+                            maxItems="3">
+                        </iw-hyperselect>
+                    </div>
+
+                    <!-- Tagging (Create Items) -->
+                    <div style="width: 100%;">
+                        <h3 style="margin-bottom: 10px;">Tagging (Create New Items)</h3>
+                        <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Type a new tag and press Enter to create it</p>
+                        <iw-hyperselect 
+                            id="tagging-select"
+                            placeholder="Add tags..." 
+                            multiple
+                            create>
+                        </iw-hyperselect>
+                    </div>
                 </div>
             </div>
         `;
+
     }
 
     /**

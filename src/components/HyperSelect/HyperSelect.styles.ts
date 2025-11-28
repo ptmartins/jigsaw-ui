@@ -9,6 +9,7 @@ export default css`
 
     :host {
         width: 100%;
+        display: block;
     }
 
     .hyperselect-container {
@@ -16,15 +17,100 @@ export default css`
         width: 100%;
     }
     
-    .input {
+    .control {
+        position: relative;
         border: 1px solid #d8dfe6;
-        padding: 10px;
+        background-color: white;
+        cursor: text;
+        min-height: 38px;
+    }
+    
+    .hyperselect-container.full .control {
+        cursor: not-allowed;
+        background-color: #f5f5f5;
+    }
+    
+    /* Multi-select items container */
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        padding: 4px;
+        align-items: center;
+    }
+    
+    /* Individual selected item (tag) */
+    .item {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background-color: #e3f2fd;
+        border: 1px solid #90caf9;
+        border-radius: 3px;
+        padding: 4px 8px;
+        font-size: 13px;
+        color: #1976d2;
+        transition: all 0.2s ease;
+    }
+    
+    .item.active {
+        background-color: #1976d2;
+        color: white;
+        border-color: #1565c0;
+    }
+    
+    .item-label {
+        user-select: none;
+    }
+    
+    .item .remove {
+        cursor: pointer;
+        font-size: 18px;
+        line-height: 1;
+        opacity: 0.7;
+        transition: opacity 0.2s ease;
+        font-weight: bold;
+        padding: 0 2px;
+    }
+    
+    .item .remove:hover {
+        opacity: 1;
+    }
+    
+    .item.active .remove {
+        opacity: 1;
+    }
+    
+    /* Input field */
+    .input {
+        border: none;
+        outline: none;
+        padding: 8px 10px;
+        width: 100%;
+        font-size: 14px;
+        background: transparent;
+    }
+    
+    .multiple .input {
+        flex: 1;
+        min-width: 120px;
+        padding: 4px 8px;
+    }
+    
+    .single .input {
         width: 100%;
     }
     
+    .input::placeholder {
+        color: #999;
+    }
+    
+    /* Loading indicator */
     .loading-indicator {
         position: absolute;
         right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
         width: 20px;
         height: 20px;
         border: 2px solid rgba(0, 0, 0, 0.1);
@@ -34,38 +120,66 @@ export default css`
     }
     
     @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
+        0% { transform: translateY(-50%) rotate(0deg); }
+        100% { transform: translateY(-50%) rotate(360deg); }
     }
     
+    /* Dropdown */
     .dropdown {
         border: 1px solid #d8dfe6;
         border-top: none;
-        max-height: 200px;
+        max-height: 250px;
         overflow-y: auto;
         background-color: white;
         position: absolute;
         width: 100%;
         z-index: 1000;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     
+    /* Option */
     .option {
-        padding: 8px 10px;
+        padding: 10px 12px;
         cursor: pointer;
+        transition: background-color 0.15s ease;
+        user-select: none;
     }
     
-    .option:hover, .option.selected {
+    .option:hover {
         background-color: #f0f5ff;
     }
     
+    .option.active {
+        background-color: #e3f2fd;
+    }
+    
+    .option.selected {
+        background-color: #f0f5ff;
+        font-weight: 500;
+    }
+    
+    .option.create {
+        background-color: #f0fdf4;
+        color: #15803d;
+        border-top: 1px solid #bbf7d0;
+    }
+    
+    .option.create:hover,
+    .option.create.active {
+        background-color: #dcfce7;
+    }
+    
+    /* Messages */
     .no-results, .error-message, .loading-message {
-        padding: 10px;
+        padding: 12px;
         color: #666;
         font-style: italic;
+        text-align: center;
     }
     
     .error-message {
         color: #d32f2f;
+        background-color: #ffebee;
     }
     
     .loading-message {
@@ -86,5 +200,11 @@ export default css`
         border-top-color: #007bff;
         border-radius: 50%;
         animation: spin 1s linear infinite;
+    }
+    
+    /* Focus states */
+    .control:focus-within {
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.1);
     }
 `
