@@ -223,16 +223,16 @@
                     </div>
 
                     <!-- Tagging (Create Items) -->
-                    <div style="width: 100%;">
-                        <h3 style="margin-bottom: 10px;">Tagging (Create New Items)</h3>
-                        <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Type a new tag and press Enter to create it</p>
-                        <iw-hyperselect 
-                            id="tagging-select"
-                            placeholder="Add tags..." 
-                            multiple
-                            create>
-                        </iw-hyperselect>
-                    </div>
+                    // <div style="width: 100%;">
+                    //     <h3 style="margin-bottom: 10px;">Tagging (Create New Items)</h3>
+                    //     <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Type a new tag and press Enter to create it</p>
+                    //     <iw-hyperselect 
+                    //         id="tagging-select"
+                    //         placeholder="Add tags..." 
+                    //         multiple
+                    //         create>
+                    //     </iw-hyperselect>
+                    // </div>
                 </div>
             </div>
         `;
@@ -358,7 +358,7 @@
                 break;
             case 'hyperselect':
                 renderHyperselectView();
-                break;
+                break;   
             case 'palette':
                 renderPaletteView();
                 break;
