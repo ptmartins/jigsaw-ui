@@ -133,8 +133,8 @@
 
 
     --component-bg: var(--bg-color-l1);
-    --component-bg-hover: var(--neutral-150);
-    --component-bg-active: var(--neutral-200);
+    --component-bg-hover: var(--bg-color-l2);
+    --component-bg-active: var(--bg-color-l3);
     --component-color: var(--color-l1);
     --component-color-subtle: var(--color-l1-subtle);
     --component-border: var(--border-l1);
@@ -142,8 +142,8 @@
     
 
     --interactive-bg: var(--bg-color-l1);
-    --interactive-bg-hover: var(--neutral-250);
-    --interactive-bg-active: var(--neutral-300);
+    --interactive-bg-hover: var(--bg-color-l2);
+    --interactive-bg-active: var(--bg-color-l3);
     --interactive-color: var(--color-l1);
     --interactive-border: var(--border-l1);
 }
@@ -181,10 +181,10 @@
     --border-l3-subtle: 1px solid var(--neutral-650);
     --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.6);
 
-    --component-bg-hover: var(--neutral-850);
-    --component-bg-active: var(--neutral-800);
-    --interactive-bg-hover: var(--neutral-850);
-    --interactive-bg-active: var(--neutral-800);
+    --component-bg-hover: var(--bg-color-l2);
+    --component-bg-active: var(--bg-color-l3);
+    --interactive-bg-hover: var(--bg-color-l2);
+    --interactive-bg-active: var(--bg-color-l3);
 }
 
 .theme-neutral {
@@ -204,7 +204,7 @@
     --border-l1-subtle: 1px solid var(--neutral-250);
     --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-    --bg-color-l2: var(--neutral-100);
+    --bg-color-l2: var(--neutral-150);
     --color-l2: var(--neutral-900);
     --color-l2-subtle: var(--neutral-650);
     --color-l2-muted: var(--neutral-550);
@@ -212,18 +212,18 @@
     --border-l2-subtle: 1px solid var(--neutral-250);
     --shadow-l2: 0 4px 12px rgba(0, 0, 0, 0.1);
 
-    --bg-color-l3: var(--white);
-    --color-l3: var(--neutral-800);
-    --color-l3-subtle: var(--neutral-600);
-    --color-l3-muted: var(--neutral-500);
-    --border-l3: 1px solid var(--neutral-300);
-    --border-l3-subtle: 1px solid var(--neutral-250);
+    --bg-color-l3: var(--neutral-200);
+    --color-l3: var(--neutral-900);
+    --color-l3-subtle: var(--neutral-650);
+    --color-l3-muted: var(--neutral-550);
+    --border-l3: 1px solid var(--neutral-350);
+    --border-l3-subtle: 1px solid var(--neutral-300);
     --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.12);
 
-    --component-bg-hover: var(--neutral-150);
-    --component-bg-active: var(--neutral-200);
-    --interactive-bg-hover: var(--neutral-150);
-    --interactive-bg-active: var(--neutral-200);
+    --component-bg-hover: var(--bg-color-l2);
+    --component-bg-active: var(--bg-color-l3);
+    --interactive-bg-hover: var(--bg-color-l2);
+    --interactive-bg-active: var(--bg-color-l3);
 }
 
 .theme-custom { 
@@ -259,10 +259,10 @@
     --border-l3-subtle: 1px solid #880088;
     --shadow-l3: 0 8px 16px rgba(153, 0, 153, 0.6);
 
-    --component-bg-hover: #330036;
-    --component-bg-active: #3d003f;
-    --interactive-bg-hover: #330036;
-    --interactive-bg-active: #3d003f;
+    --component-bg-hover: var(--bg-color-l2);
+    --component-bg-active: var(--bg-color-l3);
+    --interactive-bg-hover: var(--bg-color-l2);
+    --interactive-bg-active: var(--bg-color-l3);
 }
 
 .layer-1 {

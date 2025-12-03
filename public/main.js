@@ -134,7 +134,7 @@
      */
     let renderListView = () => {
         DOM.demoComponent.innerHTML = `
-            <div class="demo__section demo__section--list-view">
+            <div class="demo__section demo__section--list-view layer-1">
                 <h2 class="section__title">List View</h2>
                 <div class="showcase showcase--list">
                     <jg-list-view thumbnail="https://picsum.photos/50/50?random=1" header="Item 1" content="First item"> 
