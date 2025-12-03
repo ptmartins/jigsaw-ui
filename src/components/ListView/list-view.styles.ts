@@ -131,23 +131,6 @@ export default css`
     align-items: center;
   }
 
-  /* Debug overlay */
-  .list-view::before {
-    content: 'ListView | BG: ' var(--list-view-bg-color, 'MISS');
-    position: absolute;
-    top: 2px;
-    right: 2px;
-    font-size: 8px;
-    background: rgba(0,0,0,0.8);
-    color: white;
-    padding: 2px 4px;
-    border-radius: 2px;
-    pointer-events: none;
-    max-width: 150px;
-    word-break: break-all;
-    z-index: 10;
-  }
-
   /* Responsive adjustments */
   @media (max-width: 480px) {
     .list-view {
