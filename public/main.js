@@ -218,21 +218,9 @@
                             labelField="name"
                             valueField="id"
                             multiple
-                            maxItems="3">
+                            maxItems="5">
                         </iw-hyperselect>
                     </div>
-
-                    <!-- Tagging (Create Items) -->
-                    // <div style="width: 100%;">
-                    //     <h3 style="margin-bottom: 10px;">Tagging (Create New Items)</h3>
-                    //     <p style="font-size: 13px; color: #666; margin-bottom: 10px;">Type a new tag and press Enter to create it</p>
-                    //     <iw-hyperselect 
-                    //         id="tagging-select"
-                    //         placeholder="Add tags..." 
-                    //         multiple
-                    //         create>
-                    //     </iw-hyperselect>
-                    // </div>
                 </div>
             </div>
         `;
@@ -328,6 +316,24 @@
         `;
     }
 
+    // Render Sandbox View
+    let renderSandboxView = () => {
+        DOM.demoComponent.innerHTML = `
+            <div class="demo__section demo__section--sandbox">
+                <h2 class="section__title">Sandbox</h2>
+                <div class="showcase">
+                    <div class="layer layer-1">
+                        <jg-list-view 
+                            thumbnail="https://picsum.photos/50/50?random=4" 
+                            header="Sandbox Item 1" 
+                            content="This is a sandbox list view item in Layer 1.">
+                        </jg-list-view>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+
     /**
      * Render Component View 
      * @param {*} component 
@@ -364,6 +370,9 @@
                 break;
             case 'layers':
                 renderLayersView();
+                break;
+            case 'sandbox':
+                renderSandboxView();
                 break;
             default:
                 DOM.demoComponent.innerHTML = '<p>Select a component from the menu to see its demo.</p>';

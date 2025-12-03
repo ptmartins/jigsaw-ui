@@ -164,6 +164,9 @@ export class HyperSelect extends LitElement {
         if (this.closeAfterSelect) {
             this.close();
         }
+
+
+        
         
         // Dispatch item-add event
         this.dispatchEvent(new CustomEvent('item-add', {

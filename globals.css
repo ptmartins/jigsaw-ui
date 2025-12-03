@@ -1,5 +1,177 @@
 @import './src/styles/index.css';
 
+:root {
+    /* Neutrals */
+    --white: #fff;
+    --neutral-50: #fafbfc;
+    --neutral-100: #f5f6fa;
+    --neutral-150: #f0f1f5;
+    --neutral-200: #eceef0;
+    --neutral-250: #e6e8eb;
+    --neutral-300: #e3e5e8;
+    --neutral-350: #dbdde0;
+    --neutral-400: #ced4da;
+    --neutral-450: #c2c8ce;
+    --neutral-500: #adb5bd;
+    --neutral-550: #9ca3af;
+    --neutral-600: #6c757d;
+    --neutral-650: #5a6168;
+    --neutral-700: #495057;
+    --neutral-750: #3a3f44;
+    --neutral-800: #343a40;
+    --neutral-850: #23272b;
+    --neutral-900: #212529;
+    --neutral-950: #181a1b;
+    --black: #000000;
+
+    /* Buttons */
+    --btn-border-radius: 4px;
+
+    --btn-padding-x: 1rem;
+    --btn-padding-y: .75rem;
+    --btn-sm-padding-x: .75rem;
+    --btn-sm-padding-y: .5rem;
+    --btn-lg-padding-x: 1.25rem;
+    --btn-lg-padding-y: 1rem;
+
+    --btn-bg-color: #c2c2c2;
+    --btn-bg-color-hover: #929292;
+    --btn-color: #1e1e1e;
+    --btn-primary-bg-color: #007bff;
+    --btn-primary-bg-color-hover: #0069d9;
+    --btn-primary-color: #fff;
+    --btn-danger-bg-color: #dc3545;
+    --btn-danger-bg-color-hover: #c82333;
+    --btn-danger-color: #fff;
+    --btn-warning-bg-color: #ffc107;
+    --btn-warning-bg-color-hover: #e0a800;
+    --btn-warning-color: #212529;
+    --btn-success-bg-color: #28a745;
+    --btn-success-bg-color-hover: #218838;
+    --btn-success-color: #fff;
+
+    --btn-lg-font-size: 1.2rem;
+    --btn-sm-font-size: .875rem;
+
+    /* States */
+    --primary: #007bff;
+    --primary-hover: #0069d9;
+    --danger: #dc3545;
+    --danger-hover: #c82333;
+    --warning: #ffc107;
+    --warning-hover: #e0a800;
+    --success: #28a745;
+    --success-hover: #218838;
+
+    /* Layers */
+
+    /* Base */
+    --bg-color: var(--white);
+    --color: var(--neutral-800);
+    --border: 1px solid var(--neutral-300);
+
+    /* Layer 1 */
+    --bg-color-l1: var(--neutral-100);
+    --color-l1: var(--neutral-800);
+    --border-l1: 1px solid var(--neutral-300);
+
+    /* Layer 2 */
+    --bg-color-l2: var(--white);
+    --color-l2: var(--neutral-900);
+    --border-l2: 1px solid var(--neutral-300);
+
+    /* Layer 3 */
+    --bg-color-l3: var(--neutral-200);
+    --color-l3: var(--neutral-800);
+    --border-l3: 1px solid var(--neutral-300);
+}
+
+.theme-dark {
+    --bg-color: var(--neutral-900);
+    --color: var(--white);
+
+    /* --bg-color-l1: var(--neutral-800);
+    --color-l1: var(--white);
+    --border-l1: 1px solid var(--neutral-700);
+
+    --bg-color-l2: var(--neutral-700);
+    --color-l2: var(--white);
+    --border-l2: 1px solid var(--neutral-800);
+
+    --bg-color-l3: var(--neutral-600);
+    --color-l3: var(--white);
+    --border-l3: 1px solid var(--neutral-600); */
+}
+
+.theme-neutral {
+    --bg-color: var(--neutral-100);
+    --color: var(--neutral-900);
+
+    /* --bg-color-l1: var(--white);
+    --color-l1: var(--neutral-800);
+    --border-l1: 1px solid var(--neutral-300);
+
+    --bg-color-l2: var(--neutral-100);
+    --color-l2: var(--neutral-900);
+    --border-l2: 1px solid var(--neutral-300);
+
+    --bg-color-l3: var(--white);
+    --color-l3: var(--neutral-800);
+    --border-l3: 1px solid var(--neutral-300); */
+}
+
+.theme-custom { 
+    --bg-color: #1e0221;
+    --color: #fff;
+
+    /* --bg-color-l1: #28002b;
+    --color-l1: #ffffff;
+    --border-l1: 1px solid #660066;
+
+    --bg-color-l2: #3a003d;
+    --color-l2: #ffccff;
+    --border-l2: 1px solid #800080;
+
+    --bg-color-l3: #4d004f;
+    --color-l3: #ffb3ff;
+    --border-l3: 1px solid #990099; */
+}
+
+.layer-1 {
+    --bg-color: var(--bg-color-l1);
+    --color: var(--color-l1);
+    /* Add most commonly used css variables to be used by web components in this layer but must be only used by thew component and have a certain degree of contrast against the layer background */
+    --el-bg: var(--bg-color-l1);
+    --el-color: var(--color-l1);
+    --el-border: var(--border-l1);
+}
+
+.layer-2 {
+    --bg-color: var(--bg-color-l2);
+    --color: var(--color-l2);
+
+    --el-bg: var(--bg-color-l2);
+    --el-color: var(--color-l2);
+    --el-border: var(--border-l2);
+}
+
+.layer-3 {
+    --bg-color: var(--bg-color-l3);
+    --color: var(--color-l3);
+
+    --el-bg: var(--bg-color-l3);
+    --el-color: var(--color-l3);
+    --el-border: var(--border-l3);
+}
+
+.layer {
+    background-color: var(--bg-color);
+    border: var(--border);
+    color: var(--color);
+    padding: 1.5rem;
+    width: 100%;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
