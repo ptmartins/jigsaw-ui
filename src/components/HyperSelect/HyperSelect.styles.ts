@@ -1,6 +1,7 @@
 import { css } from 'lit';
 
 export default css`
+    :host,
     * {
         box-sizing: border-box;
         margin: 0;
@@ -19,8 +20,9 @@ export default css`
     
     .control {
         position: relative;
-        border: 1px solid #d8dfe6;
-        background-color: white;
+        border: var(--component-border, 1px solid #d8dfe6);
+        background-color: var(--component-bg, white);
+        color: var(--component-color, inherit);
         cursor: text;
         min-height: 38px;
     }
@@ -65,15 +67,16 @@ export default css`
     
     /* Dropdown */
     .dropdown {
-        border: 1px solid #d8dfe6;
+        border: var(--component-border, 1px solid #d8dfe6);
         border-top: none;
         max-height: 250px;
         overflow-y: auto;
-        background-color: white;
+        background-color: var(--component-bg, white);
+        color: var(--component-color, inherit);
         position: absolute;
         width: 100%;
         z-index: 1000;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: var(--component-shadow, 0 2px 8px rgba(0, 0, 0, 0.1));
     }
     
     /* Option */

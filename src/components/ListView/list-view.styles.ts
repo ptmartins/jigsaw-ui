@@ -1,6 +1,17 @@
 import { css } from 'lit';
 
 export default css`
+  :host,
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  :host {
+    display: block;
+  }
+
   .list-view {
     align-items: center;
     background-color: var(--list-view-bg-color);
@@ -19,12 +30,12 @@ export default css`
   }
 
   .list-view--clickable:hover {
-    background-color: var(--list-view-bg-color-hover, var(--bg-color-l1, #f8f9fa));
+    background-color: var(--list-view-bg-color-hover, var(--interactive-bg-hover, #f8f9fa));
     box-shadow: var(--list-view-box-shadow-hover, 0 2px 4px rgba(0, 0, 0, 0.1));
   }
 
   .list-view--clickable:active {
-    background-color: var(--list-view-bg-color-active, var(--bg-color-l3, #e9ecef));
+    background-color: var(--list-view-bg-color-active, var(--interactive-bg-active, #e9ecef));
   }
 
   .list-view__thumbnail {

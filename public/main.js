@@ -328,6 +328,20 @@
                             header="Sandbox Item 1" 
                             content="This is a sandbox list view item in Layer 1.">
                         </jg-list-view>
+                        <div class="layer layer-2">
+                            <jg-list-view
+                                thumbnail="https://picsum.photos/50/50?random=5" 
+                                header="Sandbox Item 2" 
+                                content="This is a sandbox list view item in Layer 2.">
+                            </jg-list-view>
+                            <div class="layer layer-3">
+                                <jg-list-view
+                                    thumbnail="https://picsum.photos/50/50?random=6" 
+                                    header="Sandbox Item 3" 
+                                    content="This is a sandbox list view item in Layer 3.">
+                                </jg-list-view>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

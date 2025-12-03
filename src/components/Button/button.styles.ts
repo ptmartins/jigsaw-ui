@@ -1,6 +1,17 @@
 import { css } from 'lit';
 
 export default css`
+    :host,
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :host {
+        display: inline-block;
+    }
+
     .btn {
         align-items: center; 
         background-color: var(--btn-bg-color);

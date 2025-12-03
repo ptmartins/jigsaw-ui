@@ -1,6 +1,13 @@
 import { css } from 'lit';
 
 export default css`
+    :host,
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
     :host {
         align-items: center;
         display: inline-flex;

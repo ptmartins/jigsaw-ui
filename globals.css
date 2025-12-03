@@ -1,5 +1,3 @@
-@import './src/styles/index.css';
-
 :root {
     /* Neutrals */
     --white: #fff;
@@ -53,6 +51,38 @@
     --btn-lg-font-size: 1.2rem;
     --btn-sm-font-size: .875rem;
 
+    /* Avatar */
+    --avatar-bg-color: #bcbcbc;    
+    --avatar-color: #1f1f1f;
+    --avatar-sm-size: 32px;
+    --avatar-sm-font-size: 0.875rem;
+    --avatar-md-size: 48px;
+    --avatar-md-font-size: 1rem;
+    --avatar-lg-size: 64px;
+    --avatar-lg-font-size: 1.25rem;
+
+    /* Card */
+    --card-border-radius: 8px;
+    --card-box-shadow: none;
+    --card-box-shadow-hover: 0 4px 6px rgba(0, 0, 0, .1);
+}
+
+* {
+    --card-bg-color: var(--component-bg);
+    --card-color: var(--component-color);
+    --card-border: var(--component-border);
+
+    /* List View */
+    --list-view-bg-color: var(--component-bg);
+    --list-view-border: var(--component-border);
+    --list-view-color: var(--component-color);
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
     /* States */
     --primary: #007bff;
     --primary-hover: #0069d9;
@@ -65,117 +95,236 @@
 
     /* Layers */
 
-    /* Base */
-    --bg-color: var(--white);
+    /* Base Layer  */
+    --bg-color: var(--neutral-100);
     --color: var(--neutral-800);
+    --color-subtle: var(--neutral-600);
+    --color-muted: var(--neutral-500);
     --border: 1px solid var(--neutral-300);
+    --border-subtle: 1px solid var(--neutral-200);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-    /* Layer 1 */
-    --bg-color-l1: var(--neutral-100);
+    /* Layer 1  */
+    --bg-color-l1: var(--neutral-200);
     --color-l1: var(--neutral-800);
-    --border-l1: 1px solid var(--neutral-300);
+    --color-l1-subtle: var(--neutral-600);
+    --color-l1-muted: var(--neutral-500);
+    --border-l1: 1px solid var(--neutral-350);
+    --border-l1-subtle: 1px solid var(--neutral-300);
+    --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.08);
 
-    /* Layer 2 */
+    /* Layer 2  */
     --bg-color-l2: var(--white);
     --color-l2: var(--neutral-900);
+    --color-l2-subtle: var(--neutral-650);
+    --color-l2-muted: var(--neutral-550);
     --border-l2: 1px solid var(--neutral-300);
+    --border-l2-subtle: 1px solid var(--neutral-250);
+    --shadow-l2: 0 4px 12px rgba(0, 0, 0, 0.12);
 
-    /* Layer 3 */
-    --bg-color-l3: var(--neutral-200);
-    --color-l3: var(--neutral-800);
-    --border-l3: 1px solid var(--neutral-300);
+    /* Layer 3  */
+    --bg-color-l3: var(--neutral-300);
+    --color-l3: var(--neutral-900);
+    --color-l3-subtle: var(--neutral-650);
+    --color-l3-muted: var(--neutral-550);
+    --border-l3: 1px solid var(--neutral-400);
+    --border-l3-subtle: 1px solid var(--neutral-350);
+    --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.15);
+
+
+    --component-bg: var(--bg-color-l1);
+    --component-bg-hover: var(--neutral-150);
+    --component-bg-active: var(--neutral-200);
+    --component-color: var(--color-l1);
+    --component-color-subtle: var(--color-l1-subtle);
+    --component-border: var(--border-l1);
+    --component-shadow: var(--shadow-l1);
+    
+
+    --interactive-bg: var(--bg-color-l1);
+    --interactive-bg-hover: var(--neutral-250);
+    --interactive-bg-active: var(--neutral-300);
+    --interactive-color: var(--color-l1);
+    --interactive-border: var(--border-l1);
 }
 
 .theme-dark {
-    --bg-color: var(--neutral-900);
+    --bg-color: var(--neutral-950);
     --color: var(--white);
+    --color-subtle: var(--neutral-400);
+    --color-muted: var(--neutral-500);
+    --border: 1px solid var(--neutral-750);
+    --border-subtle: 1px solid var(--neutral-800);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-    /* --bg-color-l1: var(--neutral-800);
+    --bg-color-l1: var(--neutral-900);
     --color-l1: var(--white);
+    --color-l1-subtle: var(--neutral-400);
+    --color-l1-muted: var(--neutral-500);
     --border-l1: 1px solid var(--neutral-700);
+    --border-l1-subtle: 1px solid var(--neutral-750);
+    --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.4);
 
-    --bg-color-l2: var(--neutral-700);
+    --bg-color-l2: var(--neutral-800);
     --color-l2: var(--white);
-    --border-l2: 1px solid var(--neutral-800);
+    --color-l2-subtle: var(--neutral-350);
+    --color-l2-muted: var(--neutral-450);
+    --border-l2: 1px solid var(--neutral-650);
+    --border-l2-subtle: 1px solid var(--neutral-700);
+    --shadow-l2: 0 4px 12px rgba(0, 0, 0, 0.5);
 
-    --bg-color-l3: var(--neutral-600);
+    --bg-color-l3: var(--neutral-700);
     --color-l3: var(--white);
-    --border-l3: 1px solid var(--neutral-600); */
+    --color-l3-subtle: var(--neutral-350);
+    --color-l3-muted: var(--neutral-450);
+    --border-l3: 1px solid var(--neutral-600);
+    --border-l3-subtle: 1px solid var(--neutral-650);
+    --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.6);
+
+    --component-bg-hover: var(--neutral-850);
+    --component-bg-active: var(--neutral-800);
+    --interactive-bg-hover: var(--neutral-850);
+    --interactive-bg-active: var(--neutral-800);
 }
 
 .theme-neutral {
     --bg-color: var(--neutral-100);
     --color: var(--neutral-900);
+    --color-subtle: var(--neutral-650);
+    --color-muted: var(--neutral-550);
+    --border: 1px solid var(--neutral-300);
+    --border-subtle: 1px solid var(--neutral-250);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
 
-    /* --bg-color-l1: var(--white);
+    --bg-color-l1: var(--white);
     --color-l1: var(--neutral-800);
+    --color-l1-subtle: var(--neutral-600);
+    --color-l1-muted: var(--neutral-500);
     --border-l1: 1px solid var(--neutral-300);
+    --border-l1-subtle: 1px solid var(--neutral-250);
+    --shadow-l1: 0 2px 8px rgba(0, 0, 0, 0.08);
 
     --bg-color-l2: var(--neutral-100);
     --color-l2: var(--neutral-900);
+    --color-l2-subtle: var(--neutral-650);
+    --color-l2-muted: var(--neutral-550);
     --border-l2: 1px solid var(--neutral-300);
+    --border-l2-subtle: 1px solid var(--neutral-250);
+    --shadow-l2: 0 4px 12px rgba(0, 0, 0, 0.1);
 
     --bg-color-l3: var(--white);
     --color-l3: var(--neutral-800);
-    --border-l3: 1px solid var(--neutral-300); */
+    --color-l3-subtle: var(--neutral-600);
+    --color-l3-muted: var(--neutral-500);
+    --border-l3: 1px solid var(--neutral-300);
+    --border-l3-subtle: 1px solid var(--neutral-250);
+    --shadow-l3: 0 8px 16px rgba(0, 0, 0, 0.12);
+
+    --component-bg-hover: var(--neutral-150);
+    --component-bg-active: var(--neutral-200);
+    --interactive-bg-hover: var(--neutral-150);
+    --interactive-bg-active: var(--neutral-200);
 }
 
 .theme-custom { 
     --bg-color: #1e0221;
     --color: #fff;
+    --color-subtle: #e6b3ff;
+    --color-muted: #cc99ff;
+    --border: 1px solid #660066;
+    --border-subtle: 1px solid #4d004f;
+    --shadow: 0 2px 4px rgba(102, 0, 102, 0.3);
 
-    /* --bg-color-l1: #28002b;
+    --bg-color-l1: #28002b;
     --color-l1: #ffffff;
+    --color-l1-subtle: #ffccff;
+    --color-l1-muted: #e6b3ff;
     --border-l1: 1px solid #660066;
+    --border-l1-subtle: 1px solid #550055;
+    --shadow-l1: 0 2px 8px rgba(102, 0, 102, 0.4);
 
     --bg-color-l2: #3a003d;
     --color-l2: #ffccff;
+    --color-l2-subtle: #ffb3ff;
+    --color-l2-muted: #ff99ff;
     --border-l2: 1px solid #800080;
+    --border-l2-subtle: 1px solid #700070;
+    --shadow-l2: 0 4px 12px rgba(128, 0, 128, 0.5);
 
     --bg-color-l3: #4d004f;
     --color-l3: #ffb3ff;
-    --border-l3: 1px solid #990099; */
+    --color-l3-subtle: #ff99ff;
+    --color-l3-muted: #ff80ff;
+    --border-l3: 1px solid #990099;
+    --border-l3-subtle: 1px solid #880088;
+    --shadow-l3: 0 8px 16px rgba(153, 0, 153, 0.6);
+
+    --component-bg-hover: #330036;
+    --component-bg-active: #3d003f;
+    --interactive-bg-hover: #330036;
+    --interactive-bg-active: #3d003f;
 }
 
 .layer-1 {
     --bg-color: var(--bg-color-l1);
     --color: var(--color-l1);
-    /* Add most commonly used css variables to be used by web components in this layer but must be only used by thew component and have a certain degree of contrast against the layer background */
-    --el-bg: var(--bg-color-l1);
-    --el-color: var(--color-l1);
-    --el-border: var(--border-l1);
+    --color-subtle: var(--color-l1-subtle);
+    --color-muted: var(--color-l1-muted);
+    --border: var(--border-l1);
+    --border-subtle: var(--border-l1-subtle);
+    --shadow: var(--shadow-l1);
+    
+    --component-bg: var(--bg-color-l2);
+    --component-color: var(--color-l2);
+    --component-color-subtle: var(--color-l2-subtle);
+    --component-border: var(--border-l2);
+    --component-shadow: var(--shadow-l2);
+    
+    --interactive-bg: var(--bg-color-l2);
+    --interactive-color: var(--color-l2);
+    --interactive-border: var(--border-l2);
 }
 
 .layer-2 {
     --bg-color: var(--bg-color-l2);
     --color: var(--color-l2);
-
-    --el-bg: var(--bg-color-l2);
-    --el-color: var(--color-l2);
-    --el-border: var(--border-l2);
+    --color-subtle: var(--color-l2-subtle);
+    --color-muted: var(--color-l2-muted);
+    --border: var(--border-l2);
+    --border-subtle: var(--border-l2-subtle);
+    --shadow: var(--shadow-l2);
+    
+    --component-bg: var(--bg-color-l3);
+    --component-color: var(--color-l3);
+    --component-color-subtle: var(--color-l3-subtle);
+    --component-border: var(--border-l3);
+    --component-shadow: var(--shadow-l3);
+    
+    --interactive-bg: var(--bg-color-l3);
+    --interactive-color: var(--color-l3);
+    --interactive-border: var(--border-l3);
 }
 
 .layer-3 {
+    /* Inherit from layer 3 definitions for the layer background */
     --bg-color: var(--bg-color-l3);
     --color: var(--color-l3);
-
-    --el-bg: var(--bg-color-l3);
-    --el-color: var(--color-l3);
-    --el-border: var(--border-l3);
-}
-
-.layer {
-    background-color: var(--bg-color);
-    border: var(--border);
-    color: var(--color);
-    padding: 1.5rem;
-    width: 100%;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    --color-subtle: var(--color-l3-subtle);
+    --color-muted: var(--color-l3-muted);
+    --border: var(--border-l3);
+    --border-subtle: var(--border-l3-subtle);
+    --shadow: var(--shadow-l3);
+    
+    /* Components inside L3 use L1 for contrast (circular) */
+    --component-bg: var(--bg-color-l1);
+    --component-color: var(--color-l1);
+    --component-color-subtle: var(--color-l1-subtle);
+    --component-border: var(--border-l1);
+    --component-shadow: var(--shadow-l1);
+    
+    --interactive-bg: var(--bg-color-l1);
+    --interactive-color: var(--color-l1);
+    --interactive-border: var(--border-l1);
 }
 
 html {
@@ -230,6 +379,16 @@ body {
     & > * {
         flex-grow: 1;
     }
+}
+
+.layer {
+    background-color: var(--bg-color);
+    border: var(--border);
+    box-sizing: border-box;
+    color: var(--color);
+    padding: 1.5rem;
+    margin-block: 1.5rem;
+    width: 100%;
 }
 
 /* Card-specific showcase styling */
