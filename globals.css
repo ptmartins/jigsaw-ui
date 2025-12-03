@@ -306,7 +306,6 @@
 }
 
 .layer-3 {
-    /* Inherit from layer 3 definitions for the layer background */
     --bg-color: var(--bg-color-l3);
     --color: var(--color-l3);
     --color-subtle: var(--color-l3-subtle);
@@ -314,8 +313,7 @@
     --border: var(--border-l3);
     --border-subtle: var(--border-l3-subtle);
     --shadow: var(--shadow-l3);
-    
-    /* Components inside L3 use L1 for contrast (circular) */
+
     --component-bg: var(--bg-color-l1);
     --component-color: var(--color-l1);
     --component-color-subtle: var(--color-l1-subtle);
