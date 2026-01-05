@@ -65,9 +65,6 @@
     --card-border-radius: 8px;
     --card-box-shadow: none;
     --card-box-shadow-hover: 0 4px 6px rgba(0, 0, 0, .1);
-}
-
-* {
     --card-bg-color: var(--component-bg);
     --card-color: var(--component-color);
     --card-border: var(--component-border);
@@ -77,12 +74,6 @@
     --list-view-border: var(--component-border);
     --list-view-color: var(--component-color);
 
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-:root {
     /* States */
     --primary: #007bff;
     --primary-hover: #0069d9;
@@ -146,6 +137,12 @@
     --interactive-bg-active: var(--bg-color-l3);
     --interactive-color: var(--color-l1);
     --interactive-border: var(--border-l1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .theme-dark {
